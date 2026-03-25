@@ -6,7 +6,7 @@ Welcome to the source code of my personal space on the web. This is a minimalist
 
 ### 🚀 Live Demo
 
-[[Insert Your GitHub Pages Link Here](https://mrbahre.github.io/My_WebSite/index.html)]
+[[Insert Your GitHub Pages Link Here](https://mrbahre.github.io/My_WebSite/)]
 
 
 ### 🛠️ Tech Stack
