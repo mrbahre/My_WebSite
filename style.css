@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-/* الترويسة (Header) */
+/* (Header) */
 header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@ header {
     border: 1px solid rgba(230, 126, 34, 0.2);
 }
 
-/* تنسيق الـ Profile Picture لتكون دائرية ومناسبة */
+/* profile picture rotation */
 .profile-icon-container {
     width: 120px;
     height: 120px;
@@ -91,17 +91,15 @@ header {
 }
 
 .profile-pic {
-    width: 100%; /* اجعل الصورة تغطي الـ container بالكامل */
+    width: 100%; 
     height: 100%;
-    object-fit: cover; /* تضمن أن الصورة تملأ الدائرة وتحافظ على أبعادها */
+    object-fit: cover; 
 }
-
 h1 {
     font-size: 2.2rem;
     color: var(--accent-orange);
     margin-bottom: 10px;
 }
-
 .subtitle {
     font-size: 1.3rem;
     color: var(--text-secondary);
@@ -130,7 +128,7 @@ h1 {
     background-color: #D35400;
 }
 
-/* شبكة الروابط السبعة (Responsive Grid) */
+/* (Responsive Grid) */
 .connect-section {
     padding: 60px 8%;
     text-align: center;
@@ -171,8 +169,6 @@ h1 {
     background-color: #252525;
     box-shadow: 0 10px 20px rgba(230, 126, 34, 0.2);
 }
-
-/* تمييز بطاقة Reddit السابعة */
 .reddit-card {
     grid-column: span 1; 
 }
@@ -187,6 +183,7 @@ h1 {
     flex-shrink: 0; /* منع الـ container من التقلص */
 }
 
+/*this is package*/
 .social-icon {
     width: 100%; /* اجعل الصورة تغطي الـ container */
     height: 100%;
@@ -213,7 +210,7 @@ h1 {
     color: var(--text-secondary);
 }
 
-/* التذييل (Footer) */
+/* (Footer) */
 footer {
     padding: 50px;
     text-align: center;
@@ -227,7 +224,7 @@ footer a {
     text-decoration: none;
 }
 
-/* الهواتف: ترتيب العناصر فوق بعضها */
+/* for media*/
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -237,7 +234,7 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
-/* أنميشن التوهج*/
+/* Glowing animation*/
 @keyframes ledPulse {
     0% {
         box-shadow: 0 0 15px rgba(230, 126, 34, 0.3);
@@ -257,28 +254,28 @@ footer a {
 
 
 /*=========================================The blog section--------------------------------------------------*/
-/* تنسيق الحاوية الأساسية لصفحة المدونة */
+/* first blog's style */
 .blog-page-container {
     padding: 60px 8%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* حاوية البطاقات (Flexbox) */
+/* (Flexbox) */
 .github-style-grid {
     display: flex;
-    flex-wrap: wrap; /* يسمح للبطاقات بالنزول لسطر جديد إذا صغرت الشاشة */
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 30px;
 }
 
-/* تصميم البطاقة (تشبه GitHub Repo) */
+/* تصميم البطاقة */
 .repo-card {
-    display: flex; /* وضع الصورة والنص جنباً إلى جنب */
+    display: flex; 
     align-items: flex-start; 
-    flex: 1 1 450px; /* البطاقة تأخذ مساحة مرنة، ولا يقل عرضها عن 450px إن أمكن */
+    flex: 1 1 450px; /*min width 450px*/
     background-color: var(--card-bg);
-    border: 1px solid #30363d; /* لون إطار خفيف يشبه GitHub الداكن */
+    border: 1px solid #30363d; 
     border-radius: 8px;
     padding: 20px;
     text-decoration: none;
@@ -292,12 +289,12 @@ footer a {
     box-shadow: 0 10px 20px rgba(230, 126, 34, 0.15);
 }
 
-/* الصورة التوضيحية على اليسار */
+/* illustrative image */
 .repo-img-box {
-    flex-shrink: 0; /* يمنع الصورة من الانضغاط */
+    flex-shrink: 0; /*prevents compressing image*/
     width: 60px;
     height: 60px;
-    margin-right: 20px; /* مسافة بين الصورة والنص (لأن الاتجاه ltr) */
+    margin-right: 20px; 
     background-color: #2d333b;
     border-radius: 6px;
     overflow: hidden;
@@ -312,7 +309,7 @@ footer a {
     object-fit: contain;
 }
 
-/* محتوى البطاقة (العنوان والوصف) */
+/* card content */
 .repo-content {
     display: flex;
     flex-direction: column;
@@ -332,7 +329,6 @@ footer a {
     margin-bottom: 15px;
 }
 
-/* التاجز (Tags) في أسفل البطاقة */
 .repo-tags {
     display: flex;
     gap: 10px;
@@ -347,10 +343,10 @@ footer a {
     font-family: 'Courier New', monospace;
 }
 
-/* تجاوب البطاقات مع شاشات الهواتف */
+/* the card for mobile */
 @media (max-width: 600px) {
     .repo-card {
-        flex-direction: column; /* جعل الصورة فوق النص في الموبايل */
+        flex-direction: column;
         flex: 1 1 100%;
     }
     .repo-img-box {
@@ -358,6 +354,7 @@ footer a {
         margin-bottom: 15px;
     }
 }
+/**this is package*/
 .repo-desc {
     display: -webkit-box;
     -webkit-line-clamp: 3; /* يحدد عدد الأسطر التي تظهر (مثلاً 3 أسطر فقط ثم ...) */
@@ -464,7 +461,7 @@ footer a {
     color: var(--accent-orange);
 }
 
-/* كود برمجي (Inline Code) */
+/*(Inline Code) */
 code {
     font-family: 'Fira Code', monospace;
     background: #2d333b;
@@ -476,7 +473,7 @@ code {
 
 /*--------------------------------------About Page Styles--------------------------------------------------*/
 
-/* حاوية الـ Terminal الرئيسية */
+/* Terminal container  */
 .terminal-container {
     margin-top: 20px; 
     margin-bottom: 50px;
@@ -504,35 +501,29 @@ code {
     height: 12px;
     border-radius: 50%;
 }
-/* تأثير ألوان الأزرار الحقيقية */
+/* Mac buttons */
 .terminal-buttons .close { background-color: #ff5f56; }
 .terminal-buttons .minimize { background-color: #ffbd2e; }
 .terminal-buttons .maximize { background-color: #27c93f; }
 
 .terminal-title {
-    /* استخدام الرمادي الفاتح للنص الفرعي */
     color: var(--text-secondary); 
     font-size: 0.9rem;
     flex-grow: 1;
     text-align: center;
 }
-
-/* جسم الـ Terminal (الأسطر البرمجية) */
 .terminal-body {
     padding: 25px;
     color: var(--text-primary); 
     line-height: 1.6;
 }
 
-/* الـ Prompt ($) والمؤشر */
+/*  Prompt ($)  */
 .prompt {
-    /* استخدام البرتقالي الفانسي الخاص بنا (Accent Orange) */
     color: var(--accent-orange); 
     font-weight: bold;
     margin-right: 8px;
 }
-
-/* الاستجابة (النصوص الناتجة) */
 .response {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -540,14 +531,13 @@ code {
     margin-bottom: 20px;
 }
 
-/* الاستجابة الروابط */
+/* links response */
 .response-link {
     margin-left: 20px;
     margin-bottom: 0;
 }
 
 .response-link a {
-    /* لون أزرق هادئ مستقر للروابط داخل الـ Terminal (لم يحدد له var) */
     color: #58a6ff; 
     text-decoration: none;
 }
@@ -558,22 +548,18 @@ code {
 
 /* الاقتباس */
 .response.quote {
-    /* الاقتباس بالبرتقالي الفانسي */
     color: var(--accent-orange); 
     font-style: italic;
 }
 
-/* المؤشر الوامض (Cursor) */
+/* (Cursor) */
 .cursor {
     display: inline-block;
     width: 8px;
-    
-    /* المؤشر بالبرتقالي الفانسي */
     background-color: var(--accent-orange); 
-    
     animation: blink 1s infinite;
 }
-
+/**for mobile*/
 @keyframes blink {
     50% { opacity: 0; }
 }
@@ -589,17 +575,15 @@ code {
     margin-bottom: 5px;
 }
 
-/* نصوص النجاح (السجل) - رمادي فاتح */
 .response.status-success {
-    color: var(--text-secondary); /* رمادي فاتح للإجابات */
+    color: var(--text-secondary);
 }
 
-/* نصوص الجلب (الـ API) - أزرق هادئ (نفس لون الروابط) */
 .response.status-fetch {
     color: #58a6ff; 
 }
 
-/* رسالة الختام - رمادي متوسط */
+/* رسالة الختام */
 .response.status-final {
     color: var(--text-secondary);
     font-style: italic;
