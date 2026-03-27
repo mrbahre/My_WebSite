@@ -548,7 +548,7 @@ code {
 
 .response-link a {
     /* لون أزرق هادئ مستقر للروابط داخل الـ Terminal (لم يحدد له var) */
-    color: #58a6ff; 
+    color: var(--accent-orange); 
     text-decoration: none;
 }
 
@@ -596,7 +596,7 @@ code {
 
 /* نصوص الجلب (الـ API) - أزرق هادئ (نفس لون الروابط) */
 .response.status-fetch {
-    color: #58a6ff; 
+    color: var(--accent-orange); 
 }
 
 /* رسالة الختام - رمادي متوسط */
@@ -725,8 +725,8 @@ code {
 }
 
 .status-tag.stable {
-    background-color: #2ea44f; /* أخضر ستايل جيت هاب */
-    color: #fff;
+    background-color: var(--accent-orange); /* برتقالي فانسي الخاص بنا */
+    color: #111;
 }
 .status-tag.beta {
     background-color: var(--accent-orange); /* برتقالي فانسي الخاص بنا */
@@ -737,8 +737,8 @@ code {
     color: #fff;
 }
 .status-tag.ui-project {
-    background-color: #58a6ff; /* أزرق ستايل جيت هاب */
-    color: #fff;
+    background-color: var(--accent-orange); /* برتقالي فانسي الخاص بنا */
+    color: #111;
 }
 
 /* تحسينات لضمان التناسق (Responsive Grid) - اختيارية */
