@@ -462,6 +462,7 @@ h1 {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 .terminal-header {
     background-color: var(--bg-secondary); 
     padding: 12px 20px;
@@ -800,67 +801,5 @@ footer a {
 
 /* Max-width: 800px */
 @media (max-width: 800px) {
-    .contact-grid { 
-        grid-template-columns: 1fr; 
-    }
-}
-
-/* Max-width: 768px (Mobile Landscapes & Tablets) */
-@media (max-width: 768px) {
-    .post-main-title {
-        font-size: 2rem; 
-    }
-    .post-content-container { /* Replaced .post-header-container as it wasn't defined */
-        width: 95%; 
-        padding: 40px 20px; 
-    }
-}
-
-/* Max-width: 600px (Mobile Phones) */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .embed-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .repo-card {
-        flex-direction: column; 
-        flex: 1 1 100%;
-    }
-    
-    .repo-img-box {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr; 
-    }
-}
-/* --- تنسيقات الإدخال التفاعلي --- */
-.input-line {
-    display: flex;
-    align-items: center;
-}
-
-#terminal-input {
-    background: transparent;
-    border: none;
-    color: var(--text-primary);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    outline: none;
-    width: 100%;
-    caret-color: transparent; /* إخفاء مؤشر الكتابة الافتراضي */
-}
-
-/* تعديل المؤشر ليكون بجانب النص دائماً */
-.cursor {
-    margin-left: -100%; /* لجعله يبدو ملتصقاً بالنص */
-    position: relative;
-    left: 5px;
+    .contact-grid { grid-template-columns: 1fr; }
 }
