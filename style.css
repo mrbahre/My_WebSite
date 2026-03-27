@@ -577,32 +577,6 @@ main {
     box-shadow: none;
     outline: none;
 }
-
-
-
-/* --- تنسيق الـ Terminal التفاعلي (بدون خانة إدخال مرئية) --- */
-.input-line {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#terminal-input {
-    background: transparent;
-    border: none;
-    color: var(--accent-orange); /* لون الكتابة برتقالي مريح */
-    font-family: 'monospace';
-    font-size: 1rem;
-    outline: none;
-    flex: 1;
-    caret-color: var(--accent-orange); /* مؤشر الكتابة الأصلي بلون برتقالي */
-}
-
-/* إخفاء أي حدود أو خلفيات قد تظهر من المتصفح */
-#terminal-input:focus {
-    box-shadow: none;
-    outline: none;
-}
 /* ==========================================================================
    8. LAB / PROJECTS PAGE
    General Notes:
