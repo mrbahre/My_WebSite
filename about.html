@@ -39,71 +39,20 @@
         </nav>
     </header>
 
-    <main class="terminal-container container">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="close"></span>
-                <span class="minimize"></span>
-                <span class="maximize"></span>
-            </div>
-            <div class="terminal-title">mr.bahre@edge: /home/about_me.sh</div>
-        </div>
-        
-        <div class="terminal-body monospace">
+    <div class="terminal-body monospace" id="terminal-content">
+    <p class="status-load">[ OK ] Booting Mr.bãhRé OS... [ Done ]</p>
+    <p class="status-load">[ OK ] Loading Core UI Modules... [ Done ]</p>
+    <p class="response">Type 'help' to see available commands.</p>
+    <br>
 
-            <p class="status-load">[ OK ] Booting Mr.bãhRé OS... [ Done ]</p>
-<p class="status-load">[ OK ] Loading Core UI Modules... [ Done ]</p>
-<br>
+    <div id="command-history"></div>
 
-<p><span class="prompt">$</span> whoami</p>
-<p class="response">Mr.bãhRé | Frontend UI Architect | Bot Ops</p>
-
-<p><span class="prompt">$</span> cat status.txt</p>
-<p class="response">Root access enabled. Building slick, performant web experiences.</p>
-
-<p><span class="prompt">$</span> tail -f skills.log</p>
-<p class="response status-success">[ SUCCESS ] HTML5 Semantics loaded.</p>
-<p class="response status-success">[ SUCCESS ] CSS Grid/Flexbox initialized.</p>
-<p class="response status-success">[ SUCCESS ] JavaScript ES6+ Engine running.</p>
-<br>
-
-<p><span class="prompt">$</span> fetch --user mrbahre --source github</p>
-<p class="response status-fetch">Connecting to api.github.com... [ Connected ]</p>
-<p class="response-link"><a href="https://github.com/mrbahre/Solar-System-Animation" target="_blank">-> Solar-System-Animation (CSS Art)</a></p>
-<p class="response-link"><a href="https://github.com/mrbahre/Dynamic-Hovering" target="_blank">-> Dynamic-Hovering (Interactive UX)</a></p>
-<br>
-
-<p><span class="prompt">$</span> echo $PHILOSOPHY</p>
-<p class="response quote">"Code matters. Less is more. Clean is fast."</p>
-
-<p class="status-final">Session active. System stable. Uptime: 99.9%</p>
-<p><span class="prompt">$</span> <span class="cursor">_</span></p>
-
-
-            <p><span class="prompt">$</span> whoami</p>
-            <p class="response"> , Mr.bãhRé ❥ | Frontend UI Architect | Bot Ops</p>
-            
-            <p><span class="prompt">$</span> cat status.txt</p>
-            <p class="response">Root access enabled. Building slick, performant web experiences.</p>
-            
-            <p><span class="prompt">$</span> grep -r 'Grid|Flex' skills/</p>
-            <p class="response">Grid Master (Complex Layouts)</p>
-            <p class="response">Flexbox Specialist (Dynamic Flow)</p>
-            <p class="response">JavaScript Logic (Smooth Interactions)</p>
-            
-            <p><span class="prompt">$</span> ls projects/active</p>
-            <p class="response-link"><a href="https://github.com/mrbahre/Solar-System-Animation" target="_blank">Solar-System-Animation (CSS only)</a></p>
-            <p class="response-link"><a href="https://github.com/mrbahre/Dynamic-Hovering" target="_blank">Dynamic-Hovering (Interactive UX)</a></p>
-            
-            <p><span class="prompt">$</span> coffee --check</p>
-            <p class="response">Reply from brew.server: Fuelled by Passion & Coffee ☕ (Uptime: 99.9%)</p>
-            
-            <p><span class="prompt">$</span> echo $PHILOSOPHY</p>
-            <p class="response quote">"Code matters. Less is more. Clean is fast."</p>
-            
-            <p><span class="prompt">$</span> <span class="cursor">_</span></p>
-        </div>
-    </main>
+    <div class="input-line">
+        <span class="prompt">$</span>
+        <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+        <span class="cursor">_</span>
+    </div>
+</div>
 
     <footer>
         <div class="container">
@@ -112,4 +61,5 @@
     </footer>
 
 </body>
+    <script src="terminal.js"></script>
 </html>

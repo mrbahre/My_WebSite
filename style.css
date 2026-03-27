@@ -841,3 +841,26 @@ footer a {
         grid-template-columns: 1fr; 
     }
 }
+/* --- تنسيقات الإدخال التفاعلي --- */
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    caret-color: transparent; /* إخفاء مؤشر الكتابة الافتراضي */
+}
+
+/* تعديل المؤشر ليكون بجانب النص دائماً */
+.cursor {
+    margin-left: -100%; /* لجعله يبدو ملتصقاً بالنص */
+    position: relative;
+    left: 5px;
+}
