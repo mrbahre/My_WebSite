@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.bãhRé | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+        <div class="logo">Mr.bãhRé 💡</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="blog.html">BACK TO BLOG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="post-content-container">
+        <header class="post-header">
+            <span class="post-category">Web Development / Formalities</span>
+            <h1 class="post-main-title">CSS: Flexbox vs Grid, when to use each</h1>
+            <div class="post-meta">
+                <span>By Mr.bãhRé</span> | <span>March 24, 2026</span> | <span>15 min read</span>
+            </div>
+        </header>
+
+<article class="full-post-body">
+    <p class="intro">
+        If you've ever struggled to align an element in CSS, you've likely encountered the two giants of modern layout: <strong>Flexbox</strong> and <strong>CSS Grid</strong>. While they might seem similar, they are designed for two fundamentally different purposes.
+    </p>
+
+    <section>
+        <h2>1. The Core Philosophy</h2>
+        <p>The most important rule to remember is: <strong>Flexbox is One-Dimensional</strong>, while <strong>Grid is Two-Dimensional</strong>. </p>
+        <ul>
+            <li><strong>Flexbox:</strong> Best for laying out items in a single line (either a row or a column). It excels at distributing space and aligning items.</li>
+            <li><strong>CSS Grid:</strong> Best for creating complex layouts that require control over both rows and columns simultaneously.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. When to Use Flexbox?</h2>
+        <p>Flexbox was introduced in <strong>2009</strong> to solve the "Float" nightmare. You should reach for Flexbox when:</p>
+        <ul>
+            <li>You need to align a small group of items (like a Navbar or a Social Media Icon list).</li>
+            <li>The size of your items is unknown or dynamic.</li>
+            <li>You want items to simply "flow" and wrap to the next line naturally.</li>
+        </ul>
+        <blockquote>"Flexbox is content-out: the content dictates the layout."</blockquote>
+    </section>
+
+    <section>
+        <h2>3. When to Use CSS Grid?</h2>
+        <p>CSS Grid became a W3C standard in <strong>2017</strong>. It is the powerhouse for structural layouts. Use Grid when:</p>
+        <ul>
+            <li>You are building the main structure of a webpage (Header, Sidebar, Main Content, Footer).</li>
+            <li>You need precise control over the gap between rows and columns.</li>
+            <li>You need elements to overlap each other (using <code>grid-area</code>).</li>
+        </ul>
+        <blockquote>"Grid is layout-in: the layout dictates where the content goes."</blockquote>
+    </section>
+
+    <section>
+        <h2>4. The "Golden Comparison" Table</h2>
+        <table class="history-table">
+            <tr>
+                <th>Feature</th>
+                <th>Flexbox</th>
+                <th>CSS Grid</th>
+            </tr>
+            <tr>
+                <td>Dimension</td>
+                <td>1D (Row OR Column)</td>
+                <td>2D (Row AND Column)</td>
+            </tr>
+            <tr>
+                <td>Approach</td>
+                <td>Content-First</td>
+                <td>Layout-First</td>
+            </tr>
+            <tr>
+                <td>Alignment</td>
+                <td>Excellent</td>
+                <td>Good</td>
+            </tr>
+            <tr>
+                <td>Overlapping</td>
+                <td>Difficult</td>
+                <td>Native Support</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>5. Conclusion: Can They Work Together?</h2>
+        <p>Absolutely! Most modern websites (including <strong>Mr.bãhRé's Portfolio</strong>) use both. You might use <strong>Grid</strong> to define the main sections of your page, and then use <strong>Flexbox</strong> inside those sections to align the specific icons or text. They are not enemies; they are the ultimate power couple of the web.</p>
+    </section>
+</article>
+
+    <footer>
+         <p>Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥</a></p>
+    </footer>
+</body>
+</html>
