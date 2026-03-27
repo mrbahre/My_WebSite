@@ -552,6 +552,7 @@ h1 {
 main {
     flex: 1; /* هذا يضمن دفع الفوتر للأسفل */
 }
+<<<<<<< HEAD
 
 /* --- تنسيق الـ Terminal التفاعلي (بدون خانة إدخال مرئية) --- */
 .input-line {
@@ -576,7 +577,32 @@ main {
     box-shadow: none;
     outline: none;
 }
+=======
+>>>>>>> 76f4ab0997a0025a35934c8de3dd30541afca1a9
 
+/* --- تنسيق الـ Terminal التفاعلي (بدون خانة إدخال مرئية) --- */
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: var(--accent-orange); /* لون الكتابة برتقالي مريح */
+    font-family: 'monospace';
+    font-size: 1rem;
+    outline: none;
+    flex: 1;
+    caret-color: var(--accent-orange); /* مؤشر الكتابة الأصلي بلون برتقالي */
+}
+
+/* إخفاء أي حدود أو خلفيات قد تظهر من المتصفح */
+#terminal-input:focus {
+    box-shadow: none;
+    outline: none;
+}
 /* ==========================================================================
    8. LAB / PROJECTS PAGE
    General Notes:
