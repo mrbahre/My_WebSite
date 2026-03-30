@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr.bãhRé | The Lab</title>
+    <title>Mr.bãhRé | Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 <!-- SEO Primary -->
     <meta name="title" content="Mr.bãhRé | Frontend UI Architect & UX Designer">
@@ -23,138 +24,217 @@
     <meta property="twitter:title" content="Mr.bãhRé | UI/UX Architect">
     <meta property="twitter:description" content="Building the future of web interfaces. Live logs and projects inside.">
     <meta property="twitter:image" content="pic/mainPic.jpg">
+
+    
 </head>
-<body class="dark-theme">
+<body>
 
     <header>
-        <div class="logo"> , Mr.bãhRé ❥</div>
+        <div class="logo">, Mr.bãhRé ❥</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="lab.html">Lab's</a></li>
+                <li><a href="lab.html" class="active">Lab's</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="projects-container container">
-        <h1 class="page-title monospace">/The_Lab_</h1>
-        <p class="monospace lab-status">STATUS: ONLINE | Operating from: Edge Node ⚡</p>
-        
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="card-header">
-                    <h3>Guessing-Mini-game</h3>
-                    <span class="status-tag stable">Active</span>
+    <main class="lab-wrap">
+
+        <!-- Hero Header -->
+        <div class="lab-hero">
+            <div class="lab-hero-left">
+                <p class="lab-eyebrow">Experiments & Projects</p>
+                <h1 class="lab-title">The <span>Lab_</span></h1>
+            </div>
+            <div class="lab-status-panel">
+                <div class="status-row">
+                    <span><span class="status-dot dot-green"></span>Node Status</span>
+                    <span style="color:var(--green)">ONLINE</span>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#JS</span> <span>#Logic</span> <span>#MiniGame</span>
+                <div class="status-row">
+                    <span><span class="status-dot dot-orange"></span>Projects</span>
+                    <span style="color:var(--orange)">6 Active</span>
                 </div>
-                <div class="card-desc">
-                    <p>A numbers guessing game to test luck and basic logic.</p>
+                <div class="status-row">
+                    <span><span class="status-dot dot-yellow"></span>Protocol</span>
+                    <span style="color:var(--yellow)">Edge ⚡</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="CSS">CSS</button>
+            <button class="filter-btn" data-filter="JS">JS</button>
+            <button class="filter-btn" data-filter="UI">UI</button>
+            <button class="filter-btn" data-filter="Animation">Animation</button>
+        </div>
+
+        <p class="results-meta"><span id="result-count">6</span> projects found</p>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+            <div class="project-card" data-tags="JS,Logic,MiniGame">
+                <span class="card-num">01</span>
+                <div class="card-top">
+                    <div class="card-icon-box">🎲</div>
+                    <div class="card-title-block">
+                        <div class="card-title">Guessing Mini-game</div>
+                        <span class="status-tag tag-active">● Active</span>
+                    </div>
+                </div>
+                <p class="card-desc">A numbers guessing game to test luck and basic logic. Clean UI meets simple but addictive gameplay loop.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#JS</span>
+                    <span class="tech-chip">#Logic</span>
+                    <span class="tech-chip">#MiniGame</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/Guessing-number-Minigame-/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/Guessing-number-Minigame-" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/Guessing-number-Minigame-/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/Guessing-number-Minigame-" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="card-header">
-                    <h3>Solar-System-Animation</h3>
-                    <span class="status-tag stable">CSS_Art</span>
+            <div class="project-card" data-tags="CSS,Animation,Orbits">
+                <span class="card-num">02</span>
+                <div class="card-top">
+                    <div class="card-icon-box">🪐</div>
+                    <div class="card-title-block">
+                        <div class="card-title">Solar System Animation</div>
+                        <span class="status-tag tag-css">CSS Art</span>
+                    </div>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#CSS3</span> <span>#Animation</span> <span>#Orbits</span>
-                </div>
-                <div class="card-desc">
-                    <p>A minimalist CSS-only render of solar orbits.</p>
+                <p class="card-desc">A minimalist CSS-only render of solar orbits. Pure stylesheet magic — no JavaScript, just elegant keyframes.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#CSS3</span>
+                    <span class="tech-chip">#Animation</span>
+                    <span class="tech-chip">#Orbits</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/Solar-System-Animation/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/Solar-System-Animation" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/Solar-System-Animation/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/Solar-System-Animation" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card hover-glow">
-                <div class="card-header">
-                    <h3>Dynamic-Hovering</h3>
-                    <span class="status-tag experiment">Experiment</span>
+            <div class="project-card" data-tags="CSS,UI,Hover">
+                <span class="card-num">03</span>
+                <div class="card-top">
+                    <div class="card-icon-box">✦</div>
+                    <div class="card-title-block">
+                        <div class="card-title">Dynamic Hovering</div>
+                        <span class="status-tag tag-exp">Experiment</span>
+                    </div>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#CSS3</span> <span>#UI_UX</span> <span>#Hover_Art</span>
-                </div>
-                <div class="card-desc">
-                    <p>Advanced interactive hover effects. Focused on feedback.</p>
+                <p class="card-desc">Advanced interactive hover effects focused on micro-feedback and user delight. A study in tactile web UI.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#CSS3</span>
+                    <span class="tech-chip">#UI_UX</span>
+                    <span class="tech-chip">#Hover_Art</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/Dynamic-Hovering/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/Dynamic-Hovering" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/Dynamic-Hovering/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/Dynamic-Hovering" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="card-header">
-                    <h3>AVATR</h3>
-                    <span class="status-tag beta">Visual</span>
+            <div class="project-card" data-tags="CSS,UI,Design">
+                <span class="card-num">04</span>
+                <div class="card-top">
+                    <div class="card-icon-box">👤</div>
+                    <div class="card-title-block">
+                        <div class="card-title">AVATR</div>
+                        <span class="status-tag tag-visual">Visual</span>
+                    </div>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#CSS3</span> <span>#Design</span> <span>#Components</span>
-                </div>
-                <div class="card-desc">
-                    <p>A simple yet elegant visual profile component.</p>
+                <p class="card-desc">A simple yet elegant visual profile component. Minimal design, maximum identity — a reusable avatar system.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#CSS3</span>
+                    <span class="tech-chip">#Design</span>
+                    <span class="tech-chip">#Components</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/AVATR/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/AVATR" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/AVATR/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/AVATR" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card dashboard-card">
-                <div class="card-header">
-                    <h3>Dashboard</h3>
-                    <span class="status-tag ui-project">UI_Tool</span>
+            <div class="project-card" data-tags="HTML,CSS,UI,Layout">
+                <span class="card-num">05</span>
+                <div class="card-top">
+                    <div class="card-icon-box">📊</div>
+                    <div class="card-title-block">
+                        <div class="card-title">Dashboard</div>
+                        <span class="status-tag tag-ui">UI Tool</span>
+                    </div>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#HTML</span> <span>#CSS</span> <span>#Layout</span>
-                </div>
-                <div class="card-desc">
-                    <p>A clean, focused user interface mockup for control panels.</p>
+                <p class="card-desc">A clean, focused user interface mockup for control panels. Demonstrates advanced layout composition techniques.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#HTML</span>
+                    <span class="tech-chip">#CSS</span>
+                    <span class="tech-chip">#Layout</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/Dashboard/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/Dashboard" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/Dashboard/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/Dashboard" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
 
-            <div class="project-card border-card">
-                <div class="card-header">
-                    <h3>Gradient-Border</h3>
-                    <span class="status-tag stable">Visual</span>
+            <div class="project-card" data-tags="CSS,Animation,Visual">
+                <span class="card-num">06</span>
+                <div class="card-top">
+                    <div class="card-icon-box">🌈</div>
+                    <div class="card-title-block">
+                        <div class="card-title">Gradient Border</div>
+                        <span class="status-tag tag-css">CSS Art</span>
+                    </div>
                 </div>
-                <div class="tech-stack monospace">
-                    <span>#CSS3</span> <span>#Visual_FX</span> <span>#Styling</span>
-                </div>
-                <div class="card-desc">
-                    <p>A smooth, dynamic gradient border component.</p>
+                <p class="card-desc">A smooth, dynamic gradient border component. Proof that a single CSS trick, done right, can be breathtaking.</p>
+                <div class="tech-stack">
+                    <span class="tech-chip">#CSS3</span>
+                    <span class="tech-chip">#Visual_FX</span>
+                    <span class="tech-chip">#Styling</span>
                 </div>
                 <div class="card-actions">
-                    <a href="https://mrbahre.github.io/Dynamic-Gradient-Border/" target="_blank" class="btn-primary monospace">Demo 🚀</a>
-                    <a href="https://github.com/mrbahre/Dynamic-Gradient-Border" target="_blank" class="btn-outline monospace">Code 🐙</a>
+                    <a href="https://mrbahre.github.io/Dynamic-Gradient-Border/" target="_blank" class="btn-demo">Demo 🚀</a>
+                    <a href="https://github.com/mrbahre/Dynamic-Gradient-Border" target="_blank" class="btn-code">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
                 </div>
             </div>
-            
+
         </div>
     </main>
 
     <footer>
-        <div class="container monospace">
-            <p>Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥</a></p>
-        </div>
+        Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥
     </footer>
+
+    <script>
+        
+    </script>
 
 </body>
 </html>

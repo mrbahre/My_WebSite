@@ -5,77 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mr.bãhRé</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
-<!-- SEO Primary -->
-    <meta name="title" content="Mr.bãhRé | Frontend UI Architect & UX Designer">
-    <meta name="description" content="Explore the digital lab of Mr.bãhRé. Specializing in interactive Terminal UIs, CSS animations, and high-end Discord community design.">
-    <meta name="keywords" content="Frontend Developer, UI/UX Design, CSS Art, Discord Server Architect, Web Development, Portfolio">
-
-<!-- Open Graph (For Discord/Facebook Previews) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="[https://mrbahre.github.io/My_WebSite/](https://mrbahre.github.io/My_WebSite/)">
-    <meta property="og:title" content="Mr.bãhRé's Digital Lab 💡">
-    <meta property="og:description" content="Step into a terminal-inspired world of frontend magic. Check my latest UI/UX experiments.">
-    <meta property="og:image" content="pic/mainPic.jpg"> 
-
-<!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Mr.bãhRé | UI/UX Architect">
-    <meta property="twitter:description" content="Building the future of web interfaces. Live logs and projects inside.">
-    <meta property="twitter:image" content="pic/mainPic.jpg"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Tech Logs & Notes by Mr.bãhRé">
 </head>
-<body>
 
+<body>
     <header>
-        <div class="logo"> , Mr.bãhRé ❥</div>
+        <div class="logo">, Mr.bãhRé ❥</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="lab.html">Lab's</a></li>
-                <li><a href="blog.html" class="active-link">Blog</a></li>
+                <li><a href="lab.html">Lab</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="blog-page-container">
-        <h1 class="section-title">Tech Logs & Notes:</h1>
-        
-        <div class="github-style-grid">
-            
-            <a href="post-cyber.html" class="repo-card">
-                <div class="repo-img-box">
-                    <img src="assets/images/js-logo.png" alt="JavaScript Article">
+    <main class="blog-wrap">
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <div class="blog-header-left">
+                <p class="blog-eyebrow">Tech Logs & Notes</p>
+                <h1 class="blog-title">The <span>Feed_</span></h1>
+            </div>
+            <div class="blog-post-count">
+                <strong>2</strong> posts published<br>
+                <span class="post-date-highlight">Mar 2026</span>
+            </div>
+        </div>
+
+        <!-- Featured Post -->
+        <a href="post-cyber.html" class="featured-post">
+            <div class="featured-img-pane">
+                <span class="featured-tag">Featured</span>
+                <span class="post-icon">🌐</span>
+            </div>
+            <div class="featured-content">
+                <p class="post-category-label">Web Development / History</p>
+                <h2 class="featured-post-title">HTML: From a Physics Lab to the Global Standard</h2>
+                <p class="featured-post-desc">Before the shiny interfaces of modern apps, the web was just a dream of interconnected text. That dream was realized through one humble markup language.</p>
+                <div class="post-meta-row">
+                    <span>By Mr.bãhRé</span>
+                    <span class="sep">|</span>
+                    <span>March 24, 2026</span>
+                    <span class="sep">|</span>
+                    <span>15 min read</span>
                 </div>
-                <div class="repo-content">
-                    <h2 class="repo-title">HTML: From a Physics Lab to the Global Standard</h2>
-                    <p class="repo-desc">Before the shiny interfaces of modern apps, the web was just a dream of interconnected text. That dream was realized through HTML (HyperText Markup Language).</p>
-                    <div class="repo-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">Web Dev</span>
+                <span class="read-more-arrow">Read Article →</span>
+            </div>
+        </a>
+
+        <!-- Posts Grid -->
+        <div class="posts-grid">
+            <!-- Post Card 1 -->
+            <a href="post-CSS.html" class="post-card">
+                <div class="post-card-img">
+                    <span class="post-icon">🎨</span>
+                    <span class="post-card-tag">CSS</span>
+                </div>
+                <div class="post-card-body">
+                    <p class="post-card-category">Web Development / Formalities</p>
+                    <h2 class="post-card-title">CSS Grid vs Flexbox: When to use each?</h2>
+                    <p class="post-card-desc">Breaking down the ultimate layout battle. Practical examples of structuring complex web apps with both systems.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-meta">Mar 24, 2026 · 15 min</span>
+                        <div class="post-card-tags">
+                            <span class="post-tag-chip">CSS</span>
+                            <span class="post-tag-chip">Design</span>
+                        </div>
                     </div>
                 </div>
             </a>
 
-            <a href="post-CSS.html" class="repo-card">
-                <div class="repo-img-box">
-                    <img src="assets/images/css-logo.png" alt="CSS Grid Article">
+            <!-- Post Card 2 - Coming Soon -->
+            <div class="post-card post-card-disabled">
+                <div class="post-card-img post-card-img-disabled">
+                    <span class="post-icon post-icon-disabled">🔒</span>
+                    <span class="post-card-tag post-card-tag-disabled">Soon</span>
                 </div>
-                <div class="repo-content">
-                    <h2 class="repo-title">CSS Grid vs Flexbox: When to use each?</h2>
-                    <p class="repo-desc">Breaking down the ultimate layout battle. Practical examples of structuring complex web apps.</p>
-                    <div class="repo-tags">
-                        <span class="tag">CSS</span>
-                        <span class="tag">Design</span>
+                <div class="post-card-body">
+                    <p class="post-card-category post-card-category-disabled">Coming Next</p>
+                    <h2 class="post-card-title post-card-title-disabled">JavaScript: From Callbacks to Async/Await</h2>
+                    <p class="post-card-desc">The evolution of asynchronous JS — a field guide through callback hell, promises, and the modern async paradigm.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-meta post-card-meta-disabled">Drafting...</span>
                     </div>
                 </div>
-            </a>
+            </div>
+        </div>
 
+        <!-- Call to Action -->
+        <div class="blog-cta">
+            <div class="cta-left">
+                <p class="cta-tag">Stay Connected</p>
+                <h3 class="cta-title">More dropping soon</h3>
+                <p class="cta-desc">Follow the socials to catch new posts, experiments & lab updates in real time.</p>
+            </div>
+            <div class="cta-links">
+                <a href="https://x.com/mrbahre" target="_blank" class="cta-btn cta-btn-primary">
+                    Follow on X →
+                </a>
+                <a href="https://discord.com/invite/4SfNv4Xn7c" target="_blank" class="cta-btn cta-btn-secondary">
+                    Join Discord
+                </a>
+            </div>
         </div>
     </main>
+
     <footer>
-         <p>Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥</a></p>
+        Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥
     </footer>
 </body>
+
 </html>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr.bãhRé | Personal Website</title>
+    <title>Mr.bãhRé | The Lab</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 <!-- SEO Primary -->
     <meta name="title" content="Mr.bãhRé | Frontend UI Architect & UX Designer">
     <meta name="description" content="Explore the digital lab of Mr.bãhRé. Specializing in interactive Terminal UIs, CSS animations, and high-end Discord community design.">
@@ -26,100 +25,157 @@
     <meta property="twitter:image" content="pic/mainPic.jpg">
 </head>
 
-<header>
-        <div class="logo">Mr.bãhRé 💡</div>
+<body>
+    <div id="read-progress"></div>
+
+    <header>
+        <div class="logo">, Mr.bãhRé ❥</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="blog.html">BACK TO BLOG</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="post-content-container">
-        <header class="post-header">
-            <span class="post-category">Web Development / Formalities</span>
-            <h1 class="post-main-title">CSS: Flexbox vs Grid, when to use each</h1>
-            <div class="post-meta">
-                <span>By Mr.bãhRé</span> | <span>March 24, 2026</span> | <span>15 min read</span>
+    <main class="post-wrap">
+        <article>
+            <a href="blog.html" class="back-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                Back to Blog
+            </a>
+
+            <div class="post-banner">
+                <span class="post-banner-icon">🎨</span>
             </div>
-        </header>
 
-<article class="full-post-body">
-    <p class="intro">
-        If you've ever struggled to align an element in CSS, you've likely encountered the two giants of modern layout: <strong>Flexbox</strong> and <strong>CSS Grid</strong>. While they might seem similar, they are designed for two fundamentally different purposes.
-    </p>
+            <p class="post-cat">Web Development / Formalities</p>
+            <h1 class="post-title">CSS: Flexbox vs Grid, When to Use Each</h1>
 
-    <section>
-        <h2>1. The Core Philosophy</h2>
-        <p>The most important rule to remember is: <strong>Flexbox is One-Dimensional</strong>, while <strong>Grid is Two-Dimensional</strong>. </p>
-        <ul>
-            <li><strong>Flexbox:</strong> Best for laying out items in a single line (either a row or a column). It excels at distributing space and aligning items.</li>
-            <li><strong>CSS Grid:</strong> Best for creating complex layouts that require control over both rows and columns simultaneously.</li>
-        </ul>
-    </section>
+            <div class="post-meta-bar">
+                <span class="author">Mr.bãhRé</span>
+                <span class="sep">|</span>
+                <span>March 24, 2026</span>
+                <span class="sep">|</span>
+                <span>15 min read</span>
+                <span class="sep">|</span>
+                <span>CSS · Web Dev</span>
+            </div>
 
-    <section>
-        <h2>2. When to Use Flexbox?</h2>
-        <p>Flexbox was introduced in <strong>2009</strong> to solve the "Float" nightmare. You should reach for Flexbox when:</p>
-        <ul>
-            <li>You need to align a small group of items (like a Navbar or a Social Media Icon list).</li>
-            <li>The size of your items is unknown or dynamic.</li>
-            <li>You want items to simply "flow" and wrap to the next line naturally.</li>
-        </ul>
-        <blockquote>"Flexbox is content-out: the content dictates the layout."</blockquote>
-    </section>
+            <div class="post-body">
+                <p class="intro">
+                    If you've ever struggled to align an element in CSS, you've likely encountered the two giants of modern layout: <strong>Flexbox</strong> and <strong>CSS Grid</strong>. While they might seem similar, they are designed for two fundamentally different purposes.
+                </p>
 
-    <section>
-        <h2>3. When to Use CSS Grid?</h2>
-        <p>CSS Grid became a W3C standard in <strong>2017</strong>. It is the powerhouse for structural layouts. Use Grid when:</p>
-        <ul>
-            <li>You are building the main structure of a webpage (Header, Sidebar, Main Content, Footer).</li>
-            <li>You need precise control over the gap between rows and columns.</li>
-            <li>You need elements to overlap each other (using <code>grid-area</code>).</li>
-        </ul>
-        <blockquote>"Grid is layout-in: the layout dictates where the content goes."</blockquote>
-    </section>
+                <section id="section-1">
+                    <h2 id="h-philosophy">The Core Philosophy</h2>
+                    <p>The most important rule to remember is: <strong>Flexbox is One-Dimensional</strong>, while <strong>Grid is Two-Dimensional</strong>.</p>
+                    <ul>
+                        <li><strong>Flexbox:</strong> Best for laying out items in a single line (either a row or a column). It excels at distributing space and aligning items.</li>
+                        <li><strong>CSS Grid:</strong> Best for creating complex layouts that require control over both rows and columns simultaneously.</li>
+                    </ul>
+                </section>
 
-    <section>
-        <h2>4. The "Golden Comparison" Table</h2>
-        <table class="history-table">
-            <tr>
-                <th>Feature</th>
-                <th>Flexbox</th>
-                <th>CSS Grid</th>
-            </tr>
-            <tr>
-                <td>Dimension</td>
-                <td>1D (Row OR Column)</td>
-                <td>2D (Row AND Column)</td>
-            </tr>
-            <tr>
-                <td>Approach</td>
-                <td>Content-First</td>
-                <td>Layout-First</td>
-            </tr>
-            <tr>
-                <td>Alignment</td>
-                <td>Excellent</td>
-                <td>Good</td>
-            </tr>
-            <tr>
-                <td>Overlapping</td>
-                <td>Difficult</td>
-                <td>Native Support</td>
-            </tr>
-        </table>
-    </section>
+                <section id="section-2">
+                    <h2 id="h-flexbox">When to Use Flexbox</h2>
+                    <p>Flexbox was introduced in <strong>2009</strong> to solve the "Float" nightmare. You should reach for Flexbox when:</p>
+                    <ul>
+                        <li>You need to align a small group of items (like a Navbar or a Social Media Icon list).</li>
+                        <li>The size of your items is unknown or dynamic.</li>
+                        <li>You want items to simply "flow" and wrap to the next line naturally.</li>
+                    </ul>
+                    <blockquote>"Flexbox is content-out: the content dictates the layout."</blockquote>
+                </section>
 
-    <section>
-        <h2>5. Conclusion: Can They Work Together?</h2>
-        <p>Absolutely! Most modern websites (including <strong>Mr.bãhRé's Portfolio</strong>) use both. You might use <strong>Grid</strong> to define the main sections of your page, and then use <strong>Flexbox</strong> inside those sections to align the specific icons or text. They are not enemies; they are the ultimate power couple of the web.</p>
-    </section>
-</article>
+                <section id="section-3">
+                    <h2 id="h-grid">When to Use CSS Grid</h2>
+                    <p>CSS Grid became a W3C standard in <strong>2017</strong>. It is the powerhouse for structural layouts. Use Grid when:</p>
+                    <ul>
+                        <li>You are building the main structure of a webpage (Header, Sidebar, Main Content, Footer).</li>
+                        <li>You need precise control over the gap between rows and columns.</li>
+                        <li>You need elements to overlap each other (using <code>grid-area</code>).</li>
+                    </ul>
+                    <blockquote>"Grid is layout-in: the layout dictates where the content goes."</blockquote>
+                </section>
+
+                <section id="section-4">
+                    <h2 id="h-comparison">The Golden Comparison Table</h2>
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Flexbox</th>
+                            <th>CSS Grid</th>
+                        </tr>
+                        <tr>
+                            <td>Dimension</td>
+                            <td>1D (Row OR Column)</td>
+                            <td>2D (Row AND Column)</td>
+                        </tr>
+                        <tr>
+                            <td>Approach</td>
+                            <td>Content-First</td>
+                            <td>Layout-First</td>
+                        </tr>
+                        <tr>
+                            <td>Alignment</td>
+                            <td>Excellent</td>
+                            <td>Good</td>
+                        </tr>
+                        <tr>
+                            <td>Overlapping</td>
+                            <td>Difficult</td>
+                            <td>Native Support</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="section-5">
+                    <h2 id="h-conclusion">Conclusion: Can They Work Together?</h2>
+                    <p>Absolutely! Most modern websites (including Mr.bãhRé's Portfolio) use both. You might use <strong>Grid</strong> to define the main sections of your page, and then use <strong>Flexbox</strong> inside those sections to align the specific icons or text. They are not enemies; they are the ultimate power couple of the web.</p>
+                </section>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <p class="sidebar-label">Table of Contents</p>
+                <ul class="toc-list">
+                    <li><a href="#section-1" data-num="01">Core Philosophy</a></li>
+                    <li><a href="#section-2" data-num="02">When to Use Flexbox</a></li>
+                    <li><a href="#section-3" data-num="03">When to Use Grid</a></li>
+                    <li><a href="#section-4" data-num="04">Comparison Table</a></li>
+                    <li><a href="#section-5" data-num="05">Conclusion</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-label">Post Info</p>
+                <div class="sidebar-info-row"><span>Author</span><span>Mr.bãhRé</span></div>
+                <div class="sidebar-info-row"><span>Date</span><span>Mar 24, 2026</span></div>
+                <div class="sidebar-info-row"><span>Read time</span><span>15 min</span></div>
+                <div class="sidebar-info-row"><span>Category</span><span class="category-highlight">CSS</span></div>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-label">Share</p>
+                <div class="share-btns">
+                    <a href="https://x.com/intent/tweet?text=CSS%3A+Flexbox+vs+Grid&url=https://mrbahre.github.io/My_WebSite/post-CSS.html" target="_blank" class="share-btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+                        Share on X
+                    </a>
+                    <a href="https://discord.com/invite/4SfNv4Xn7c" target="_blank" class="share-btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        Share on Discord
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </main>
 
     <footer>
-         <p>Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥</a></p>
+        Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥
     </footer>
 </body>
+
 </html>

@@ -53,3 +53,62 @@ input.addEventListener('keydown', function(e) {
         window.scrollTo(0, document.body.scrollHeight);
     }
 });
+/*---------------------the blog and posts functionality---------------------*/
+
+ // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('read-progress').style.width = progress + '%';
+        });
+
+        // Active TOC highlight
+        const sections = document.querySelectorAll('article section');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    tocLinks.forEach(a => {
+                        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+
+
+
+
+
+
+/*--------------------------------The lab filter functionality----------------------------*/ 
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+        const countEl = document.getElementById('result-count');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                let visible = 0;
+
+                cards.forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    if (filter === 'all' || tags.toLowerCase().includes(filter.toLowerCase())) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                countEl.textContent = visible;
+            });
+        });
