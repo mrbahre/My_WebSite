@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.bãhRé | About Me</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
-<!-- SEO Primary -->
     <meta name="title" content="Mr.bãhRé | Frontend UI Architect & UX Designer">
     <meta name="description" content="Explore the digital lab of Mr.bãhRé. Specializing in interactive Terminal UIs, CSS animations, and high-end Discord community design.">
     <meta name="keywords" content="Frontend Developer, UI/UX Design, CSS Art, Discord Server Architect, Web Development, Portfolio">
-
-<!-- Open Graph (For Discord/Facebook Previews) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[https://mrbahre.github.io/My_WebSite/](https://mrbahre.github.io/My_WebSite/)">
+    <meta property="og:url" content="https://mrbahre.github.io/My_WebSite/">
     <meta property="og:title" content="Mr.bãhRé's Digital Lab 💡">
     <meta property="og:description" content="Step into a terminal-inspired world of frontend magic. Check my latest UI/UX experiments.">
-    <meta property="og:image" content="pic/mainPic.jpg"> 
-
-<!-- Twitter -->
+    <meta property="og:image" content="pic/mainPic.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Mr.bãhRé | UI/UX Architect">
     <meta property="twitter:description" content="Building the future of web interfaces. Live logs and projects inside.">
     <meta property="twitter:image" content="pic/mainPic.jpg">
 </head>
-<body class="dark-theme">
+<body>
 
     <header>
-        <div class="logo"> , Mr.bãhRé ❥</div>
+        <div class="logo">, Mr.bãhRé ❥</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="lab.html">Lab's</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -39,38 +36,63 @@
         </nav>
     </header>
 
-    <main class="terminal-container container">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="close"></span>
-                <span class="minimize"></span>
-                <span class="maximize"></span>
+    <main class="about-wrap">
+
+        <!-- Page Header -->
+        <div class="about-hero">
+            <div class="about-hero-left">
+                <p class="about-eyebrow">Interactive Resume</p>
+                <h1 class="about-title">The <span>Shell_</span></h1>
             </div>
-            <div class="terminal-title">mr.bahre@edge: /home/about_me.sh</div>
+            <div class="about-info-panel">
+                <div class="status-row">
+                    <span><span class="status-dot dot-green"></span>Session</span>
+                    <span style="color:var(--green)">ACTIVE</span>
+                </div>
+                <div class="status-row">
+                    <span><span class="status-dot dot-orange"></span>User</span>
+                    <span style="color:var(--orange)">mr.bahre</span>
+                </div>
+                <div class="status-row">
+                    <span><span class="status-dot dot-yellow"></span>Shell</span>
+                    <span style="color:var(--yellow)">bash ⚡</span>
+                </div>
+            </div>
         </div>
 
-    <div class="terminal-body monospace" id="terminal-content">
-    <p class="status-load">[ OK ] Booting Mr.bãhRé OS... [ Done ]</p>
-    <p class="status-load">[ OK ] Loading Core UI Modules... [ Done ]</p>
-    <p class="response">Type 'help' to see available commands.</p>
-    <br>
+        <!-- Terminal -->
+        <div class="terminal-container" id="terminal-content">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <div class="terminal-title">mr.bahre@edge: /home/about_me.sh</div>
+            </div>
 
-    <div id="command-history"></div>
+            <div class="terminal-body monospace">
+                <p class="status-load">[ OK ] Booting Mr.bãhRé OS... [ Done ]</p>
+                <p class="status-load">[ OK ] Loading Core UI Modules... [ Done ]</p>
+                <p class="response">Type <span style="color:var(--orange)">'help'</span> to see available commands.</p>
+                <br>
 
-    <div class="input-line">
-        <span class="prompt">$</span>
-        <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
-        <span class="cursor">_</span>
-    </div>
-</div>
+                <div id="command-history"></div>
+
+                <div class="input-line">
+                    <span class="prompt">$</span>
+                    <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
-        <div class="container">
-              <p>Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥</a></p>
-        </div>
+        Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥
     </footer>
 
-</body>
     <script src="script.js"></script>
+</body>
 </html>
-
