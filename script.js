@@ -2,17 +2,14 @@ const input = document.getElementById('terminal-input');
 const history = document.getElementById('command-history');
 const terminalContainer = document.getElementById('terminal-content');
 
-// 1. جعل الـ Input نشطاً دائماً بمجرد تحميل الصفحة
 window.onload = () => input.focus();
-
-// 2. إذا ضغط المستخدم في أي مكان داخل الـ Terminal، يتم تفعيل الـ Input
 document.addEventListener('click', () => {
     input.focus();
 });
 
 const commands = {
     'help': 'Available: whoami, status, skills, projects, clear, logs',
-    'whoami': 'Mr.bãhRé | Frontend UI Architect | Gaming Enthusiast',
+    'whoami': ', Mr.bãhRé | Frontend UI/UX Architect | Body Builder ',
     'status': 'System: Active. Exploring new frontend horizons.',
     'skills': 'HTML5, CSS3 (Grid/Flex), JS, Git, UI/UX Design.',
     'logs': 'Redirecting to System Logs...',
@@ -31,10 +28,12 @@ input.addEventListener('keydown', function(e) {
         // تنفيذ الأوامر
         if (fullCommand === 'clear') {
             history.innerHTML = '';
-        } else if (fullCommand === 'projects') {
-            window.location.href = 'projects.html';
-        } else if (fullCommand === 'logs') {
-            window.location.href = 'changelog.html';
+        } else if (fullCommand === 'home') {
+            window.location.href = 'index.html';
+        } else if (fullCommand === 'lab') {
+            window.location.href = 'lab.html';
+        } else if (fullCommand === 'contact'){
+            window.location.href = 'contact.html';
         } else if (commands[fullCommand]) {
             const response = document.createElement('p');
             response.className = 'response';
@@ -101,7 +100,8 @@ input.addEventListener('keydown', function(e) {
 
                 cards.forEach(card => {
                     const tags = card.dataset.tags || '';
-                    if (filter === 'all' || tags.toLowerCase().includes(filter.toLowerCase())) {
+                    const tagArray = tags.toLowerCase().split(/\s+/).filter(tag => tag);
+                    if (filter === 'all' || tagArray.includes(filter.toLowerCase())) {
                         card.classList.remove('hidden');
                         visible++;
                     } else {
@@ -112,3 +112,7 @@ input.addEventListener('keydown', function(e) {
                 countEl.textContent = visible;
             });
         });
+
+
+
+ 

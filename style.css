@@ -49,6 +49,7 @@ body {
     color: var(--text-primary);
     font-family: 'Montserrat', 'Tajawal', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .orange-text {
@@ -73,37 +74,46 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background-color: rgba(0, 0, 0, 0.3);
+    padding: 18px 6%;
+    background: rgba(12,12,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-family: var(--mono);
+    font-size: 1.1rem;
     font-weight: bold;
-    color: var(--accent-orange);
+    color: var(--orange);
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
+.nav-links li { margin-left: 0; }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--accent-orange);
-    font-size: 0.9rem;
-    transition: 0.3s;
+    color: var(--txt2);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
 }
 
-.nav-links a:hover {
-    letter-spacing: 1px;
-    filter: brightness(1.2);
-    color: var(--text-primary);
-}
+.nav-links a:hover,
+.nav-links a.active { color: var(--orange); }
 
 /* ==========================================================================
    4. HERO & BIO SECTION (Legacy profile pic helper)
@@ -805,6 +815,8 @@ header {
             margin: 28px 0;
             font-family: var(--mono);
             font-size: 0.82rem;
+            display: block;
+            overflow-x: auto;
         }
         .post-body th, .post-body td {
             border: 1px solid var(--border);
@@ -1045,10 +1057,7 @@ header {
     background-color: var(--accent-orange); 
     animation: blink 1s infinite;
 }
-/* --- جعل الـ Footer في الأسفل دائماً --- */
-main {
-    flex: 1; /* هذا يضمن دفع الفوتر للأسفل */
-}
+
 
 
 /* --- تنسيق الـ Terminal التفاعلي (بدون خانة إدخال مرئية) --- */
@@ -2072,22 +2081,222 @@ footer a {
    - Grouped together to handle all mobile/tablet breakpoint adjustments.
    ========================================================================== */
 
-/* Max-width: 900px (Tablets) */
-@media (max-width: 900px) {
+/* ==========================================================================
+   TRANSLATE BAR
+   ========================================================================== */
+.translate-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.translate-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--txt2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 4px;
+}
+
+.translate-btn {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--txt2);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 7px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.translate-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.translate-btn.active {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #111;
+    font-weight: 700;
+}
+
+/* RTL adjustments when Arabic is active */
+[dir="rtl"] .post-body { text-align: right; }
+[dir="rtl"] .post-cat::before { display: none; }
+[dir="rtl"] .post-body h2::before { margin-right: 0; margin-left: 12px; }
+[dir="rtl"] .post-meta-bar { flex-direction: row-reverse; flex-wrap: wrap; }
+[dir="rtl"] .back-link { flex-direction: row-reverse; }
+[dir="rtl"] .post-body ul,
+[dir="rtl"] .post-body ol { padding-right: 24px; padding-left: 0; }
+[dir="rtl"] .post-body blockquote {
+    border-left: none;
+    border-right: 3px solid var(--orange);
+    border-radius: 10px 0 0 10px;
+}
+[dir="rtl"] .sidebar-info-row { flex-direction: row-reverse; }
+[dir="rtl"] .toc-list a { flex-direction: row-reverse; }
+[dir="rtl"] .translate-bar { flex-direction: row-reverse; }
+
+/* ==========================================================================
+   GLOBAL OVERFLOW GUARD
+   ========================================================================== */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ==========================================================================
+   TABLET — max 1024px
+   ========================================================================== */
+@media (max-width: 1024px) {
+
+    /* Lab */
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .contact-hero, .about-hero { grid-template-columns: 1fr; }
-    .contact-status-panel, .about-info-panel { display: none; }
-    .home-grid { grid-template-columns: repeat(2, 1fr); }
+    .lab-status-panel { display: none; }
+    .lab-hero { grid-template-columns: 1fr; }
+
+    /* Blog */
+    .featured-post { grid-template-columns: 1fr; }
+    .featured-img-pane { min-height: 180px; }
+    .blog-cta { flex-direction: column; }
+
+    /* Post pages */
+    .post-wrap { grid-template-columns: 1fr; }
+    .post-sidebar { position: static; }
+
+    /* Contact */
+    .contact-hero { grid-template-columns: 1fr; }
+    .contact-status-panel { display: none; }
+
+    /* About */
+    .about-hero { grid-template-columns: 1fr; }
+    .about-info-panel { display: none; }
+
+    /* Home grid */
+    .home-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; }
 }
 
-/* Max-width: 800px */
-@media (max-width: 800px) {
+/* ==========================================================================
+   MOBILE LARGE — max 768px
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 16px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .logo { font-size: 1.1rem; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+    .nav-links li { margin-left: 0; }
+    .nav-links a { font-size: 0.75rem; }
+
+    /* Lab */
+    .lab-wrap { padding: 40px 5% 80px; }
+    .lab-title { font-size: 2.4rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .filter-bar { gap: 8px; }
+
+    /* Blog */
+    .blog-wrap { padding: 40px 5% 80px; }
+    .blog-title { font-size: 2.4rem; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .blog-header { flex-direction: column; align-items: flex-start; }
+    .blog-cta { padding: 28px; }
+
+    /* Post pages */
+    .post-wrap { padding: 40px 5% 80px; }
+    .post-title { font-size: 1.6rem; }
+    .post-banner { height: 180px; font-size: 4rem; }
+    .post-meta-bar { gap: 10px; font-size: 0.65rem; }
+
+    /* Contact */
+    .contact-wrap { padding: 40px 5% 80px; }
+    .contact-title { font-size: 2.4rem; }
     .contact-grid { grid-template-columns: 1fr; }
+
+    /* About */
+    .about-wrap { padding: 40px 5% 80px; }
+    .about-title { font-size: 2.4rem; }
+    .terminal-body { padding: 18px; }
+
+    /* Home */
+    .home-main { padding: 30px 5% 60px; gap: 32px; }
+    .home-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-center { padding: 28px 24px; }
+
+    /* Footer */
+    footer { padding: 30px 5%; font-size: 0.75rem; }
 }
 
-/* Max-width: 600px */
-@media (max-width: 600px) {
-    .contact-title, .about-title { font-size: 2.2rem; }
-    .home-grid { grid-template-columns: repeat(2, 1fr); }
-    .home-name { font-size: 1.5rem; }
+/* ==========================================================================
+   MOBILE SMALL — max 480px
+   ========================================================================== */
+@media (max-width: 480px) {
+
+    /* Header — stack logo above nav */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 5%;
+        gap: 10px;
+    }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 0.7rem; letter-spacing: 0.5px; }
+
+    /* Lab */
+    .lab-title { font-size: 1.9rem; letter-spacing: -1px; }
+    .lab-eyebrow { font-size: 0.65rem; }
+    .card-actions { flex-direction: column; }
+    .btn-demo, .btn-code { width: 100%; text-align: center; justify-content: center; }
+
+    /* Blog */
+    .blog-title { font-size: 1.9rem; letter-spacing: -1px; }
+    .featured-content { padding: 24px 20px; }
+    .featured-post-title { font-size: 1.3rem; }
+    .blog-cta { padding: 20px; }
+    .cta-title { font-size: 1.3rem; }
+
+    /* Post pages */
+    .post-title { font-size: 1.35rem; }
+    .post-banner { height: 140px; font-size: 3rem; }
+    .post-body { font-size: 0.95rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-body table { font-size: 0.75rem; }
+    .post-body th, .post-body td { padding: 8px 10px; }
+
+    /* Contact */
+    .contact-title { font-size: 1.9rem; letter-spacing: -1px; }
+    .contact-card { padding: 24px 20px; }
+    .social-links-bar { gap: 6px; }
+    .social-links-bar a { font-size: 0.65rem; padding: 5px 10px; }
+
+    /* About */
+    .about-title { font-size: 1.9rem; letter-spacing: -1px; }
+    .terminal-body { padding: 14px; font-size: 0.82rem; }
+    #terminal-input { font-size: 0.82rem; }
+
+    /* Home */
+    .home-main { padding: 24px 4% 50px; gap: 24px; }
+    .home-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .home-center { padding: 24px 16px; gap: 10px; }
+    .home-avatar { width: 96px; height: 96px; }
+    .home-name { font-size: 1.25rem; }
+    .home-role { font-size: 0.65rem; }
+    .home-stack span { font-size: 0.58rem; padding: 2px 8px; }
+    .hcard { padding: 14px 12px; gap: 9px; }
+    .hcard-icon { width: 32px; height: 32px; border-radius: 6px; }
+    .hcard .social-icon { width: 16px; height: 16px; }
+    .hcard-info h4 { font-size: 0.75rem; }
+    .hcard-info p { font-size: 0.58rem; }
 }
