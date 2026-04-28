@@ -265,16 +265,10 @@
         function setLang(lang) {
             currentLang = lang;
             const root = document.getElementById('html-root');
-
-            // Set direction & lang attribute
             root.setAttribute('lang', lang);
             root.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-            // Toggle active button
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
-
-            // Translate all elements with data-en / data-ar
             document.querySelectorAll('[data-en]').forEach(el => {
                 const text = el.getAttribute('data-' + lang);
                 if (text) el.innerHTML = text;
