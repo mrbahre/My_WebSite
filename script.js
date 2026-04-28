@@ -4,7 +4,7 @@
    1.  Safe Query Helpers
    2.  Page Transition Fade-in
    3.  Navbar — Scroll Shrink + Active Link
-   4.  Custom Cursor (desktop only) — *Removed for better mobile compatibility*
+   4.  Custom Cursor (desktop only) - *Removed for better mobile compatibility*
    5.  Scroll-reveal Animations
    6.  Reading Progress Bar  (post pages)
    7.  TOC Active Highlight  (post pages)
@@ -29,27 +29,33 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 /* ─────────────────────────────────────────────
    2. PAGE TRANSITION — FADE IN
-   Every page fades in smoothly on load.
+   Disabled on touch/mobile devices to avoid
+   sluggish feel and keyboard-jump issues.
 ───────────────────────────────────────────── */
-document.documentElement.style.opacity = '0';
-document.documentElement.style.transition = 'opacity 0.4s ease';
+const isMobile = window.matchMedia('(pointer: coarse)').matches
+                 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 
-window.addEventListener('load', () => {
-    document.documentElement.style.opacity = '1';
-});
+if (!isMobile) {
+    document.documentElement.style.opacity = '0';
+    document.documentElement.style.transition = 'opacity 0.4s ease';
 
-// Fade out before navigating away
-qsa('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('mailto') ||
-        href.startsWith('http') || href.startsWith('tel')) return;
-
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        document.documentElement.style.opacity = '0';
-        setTimeout(() => { window.location.href = href; }, 380);
+    window.addEventListener('load', () => {
+        document.documentElement.style.opacity = '1';
     });
-});
+
+    // Fade out before navigating away
+    qsa('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto') ||
+            href.startsWith('http') || href.startsWith('tel')) return;
+
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            document.documentElement.style.opacity = '0';
+            setTimeout(() => { window.location.href = href; }, 380);
+        });
+    });
+}
 
 
 /* ─────────────────────────────────────────────
@@ -78,6 +84,7 @@ if (header) {
         }
     });
 }
+
 
 /* ─────────────────────────────────────────────
    5. SCROLL-REVEAL ANIMATIONS
@@ -154,9 +161,12 @@ const cmdHistory    = qs('#command-history');
 
 if (terminalInput && cmdHistory) {
 
-    // Focus on load and on click anywhere
-    window.addEventListener('load', () => terminalInput.focus());
-    document.addEventListener('click', () => terminalInput.focus());
+    // Focus on load and on click anywhere — desktop only
+    // On mobile, autofocus triggers the keyboard which pushes the layout
+    if (!isMobile) {
+        window.addEventListener('load', () => terminalInput.focus());
+        document.addEventListener('click', () => terminalInput.focus());
+    }
 
     const commands = {
         'help':     'Available: whoami, status, skills, projects, contact, clear',
