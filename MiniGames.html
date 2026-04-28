@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Mr.bãhRé | Mini Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
+    <meta name="description" content="Mini Games — Coming Soon | Mr.bãhRé">
+</head>
+<body>
+
+    <header>
+        <div class="logo">, Mr.bãhRé ❥</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="minigames.html" class="active">Mini Games</a></li>
+                <li><a href="lab.html">Lab's</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mg-wrap">
+
+        <!-- Page Header -->
+        <div class="mg-hero">
+            <div>
+                <p class="mg-eyebrow">Interactive Experiences</p>
+                <h1 class="mg-title">Mini <span>Games_</span></h1>
+            </div>
+            <div class="mg-status-panel">
+                <div class="status-row">
+                    <span><span class="status-dot dot-yellow"></span>Status</span>
+                    <span style="color:var(--yellow)">BUILDING</span>
+                </div>
+                <div class="status-row">
+                    <span><span class="status-dot dot-orange"></span>Games</span>
+                    <span style="color:var(--orange)">0 / ??? </span>
+                </div>
+                <div class="status-row">
+                    <span><span class="status-dot dot-green"></span>ETA</span>
+                    <span style="color:var(--green)">Soon™ ⚡</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage -->
+        <div class="mg-stage">
+
+            <!-- LEGO Builder SVG -->
+            <div class="lego-scene">
+                <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg" width="220" height="300">
+
+                    <!-- Ground shadow -->
+                    <ellipse class="lego-shadow" cx="110" cy="296" rx="52" ry="7" fill="#000"/>
+
+                    <!-- ── BODY GROUP (bounces) ── -->
+                    <g class="lego-body-group">
+
+                        <!-- LEGS -->
+                        <g class="lego-leg-left">
+                            <!-- left leg -->
+                            <rect x="76" y="232" width="28" height="46" rx="6" fill="#c96a00"/>
+                            <!-- left boot -->
+                            <rect x="72" y="268" width="34" height="14" rx="5" fill="#8B4500"/>
+                        </g>
+                        <g class="lego-leg-right">
+                            <!-- right leg -->
+                            <rect x="116" y="232" width="28" height="46" rx="6" fill="#d97a10"/>
+                            <!-- right boot -->
+                            <rect x="114" y="268" width="34" height="14" rx="5" fill="#8B4500"/>
+                        </g>
+
+                        <!-- TORSO -->
+                        <rect x="68" y="158" width="84" height="80" rx="8" fill="#E67E22"/>
+                        <!-- torso detail: pocket -->
+                        <rect x="78" y="174" width="18" height="14" rx="3" fill="#c96a00" opacity="0.6"/>
+                        <!-- torso detail: stripe -->
+                        <rect x="68" y="196" width="84" height="6" rx="0" fill="#c96a00" opacity="0.4"/>
+                        <!-- torso stud (LEGO connector) -->
+                        <circle cx="110" cy="155" r="10" fill="#E67E22"/>
+                        <circle cx="110" cy="155" r="7"  fill="#d97a10"/>
+
+                        <!-- LEFT ARM (sways gently) -->
+                        <g class="lego-arm-left">
+                            <rect x="46" y="160" width="24" height="52" rx="10" fill="#E67E22"/>
+                            <!-- left hand -->
+                            <circle cx="58" cy="218" r="10" fill="#F5CBA7"/>
+                        </g>
+
+                        <!-- RIGHT ARM + HAMMER (swings) -->
+                        <g class="lego-arm-right">
+                            <rect x="150" y="160" width="24" height="52" rx="10" fill="#E67E22"/>
+                            <!-- right hand -->
+                            <circle cx="162" cy="218" r="10" fill="#F5CBA7"/>
+                            <!-- hammer handle -->
+                            <rect x="158" y="195" width="7" height="48" rx="3" fill="#6d4c41"/>
+                            <!-- hammer head -->
+                            <rect x="143" y="190" width="38" height="20" rx="5" fill="#555"/>
+                            <rect x="143" y="190" width="18" height="20" rx="5" fill="#444"/>
+
+                            <!-- Sparks (appear near hammer head) -->
+                            <circle class="spark" cx="148" cy="192" r="3" fill="#FFD700"/>
+                            <circle class="spark" cx="154" cy="187" r="2" fill="#FFA500"/>
+                            <circle class="spark" cx="142" cy="194" r="2.5" fill="#FFD700"/>
+                        </g>
+
+                        <!-- HEAD GROUP (tilts) -->
+                        <g class="lego-head-group">
+                            <!-- neck -->
+                            <rect x="98" y="126" width="24" height="14" rx="4" fill="#F5CBA7"/>
+                            <!-- head -->
+                            <rect x="78" y="86" width="64" height="56" rx="12" fill="#F5CBA7"/>
+                            <!-- eyes -->
+                            <ellipse cx="97"  cy="108" rx="6" ry="7" fill="#222"/>
+                            <ellipse cx="123" cy="108" rx="6" ry="7" fill="#222"/>
+                            <!-- eye shine -->
+                            <circle cx="99"  cy="105" r="2" fill="white"/>
+                            <circle cx="125" cy="105" r="2" fill="white"/>
+                            <!-- smile -->
+                            <path d="M96 120 Q110 132 124 120" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+                            <!-- HELMET (hard hat — yellow/orange) -->
+                            <g class="lego-helmet">
+                                <!-- brim -->
+                                <rect x="70" y="90" width="80" height="10" rx="4" fill="#FFC300"/>
+                                <!-- dome -->
+                                <ellipse cx="110" cy="86" rx="38" ry="30" fill="#FFD700"/>
+                                <!-- helmet top knob (LEGO stud) -->
+                                <circle cx="110" cy="58" r="9" fill="#FFD700"/>
+                                <circle cx="110" cy="58" r="6" fill="#FFC300"/>
+                                <!-- helmet stripe -->
+                                <rect x="70" y="82" width="80" height="6" rx="0" fill="#FFC300" opacity="0.5"/>
+                                <!-- helmet ventilation lines -->
+                                <line x1="90" y1="68" x2="86" y2="88" stroke="#FFA500" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="110" y1="58" x2="110" y2="88" stroke="#FFA500" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="130" y1="68" x2="134" y2="88" stroke="#FFA500" stroke-width="1.5" opacity="0.6"/>
+                            </g>
+                        </g>
+
+                    </g><!-- end body group -->
+                </svg>
+            </div>
+
+            <!-- Text Block -->
+            <div class="uw-badge">
+                <span class="uw-label">// status.log</span>
+                <h2 class="uw-title">Under <span>Work_</span></h2>
+                <p class="uw-sub">
+                    Something interactive is being built right here.<br>
+                    Mini games, experiments & playful things — coming soon.
+                </p>
+                <div class="uw-progress-wrap">
+                    <div class="uw-progress-bar"></div>
+                </div>
+                <span style="font-family:var(--mono);font-size:0.64rem;color:var(--txt2);margin-top:4px;">
+                    build progress... don't rush me 🔨
+                </span>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Powered by <a href="https://github.com">Github</a> | © 2026 , Mr.bãhRé ❥
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Mr.bãhRé | Social Media Platforms</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -285,7 +285,8 @@
                 const text = a.getAttribute('data-' + lang);
                 if (text) a.textContent = text;
             });
-            
+
+            // Arabic font boost
             document.body.style.fontFamily = lang === 'ar'
                 ? "'Tajawal', 'Montserrat', sans-serif"
                 : "'Syne', 'Montserrat', sans-serif";
